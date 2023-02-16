@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <style>
+        section{
+            border: 1px solid black;
+            height: 100px;
+            margin: 40px auto;
+            width: 400px;
+        }
+        h1{
+            background-color: brown;
+            color: white;
+            font-size: 1.2em;
+            left: -10px;
+            padding: 5px 0;
+            position: relative;
+            text-align: center;
+            width: 420px;
+        }
+        h1::before{
+            border-color: transparent brown brown transparent;
+            border-style: solid;
+            border-width: 5px;
+            content: "";
+            left: 0;
+            position: absolute;
+            top: -10px;
+        }
+        h1::after{
+            border-color: transparent transparent brown brown;
+            border-style: solid;
+            border-width: 5px;
+            content: "";
+            right: 0;
+            position: absolute;
+            top: -10px;
+        }
+        p.help{
+            margin: auto;
+            background-color: beige;
+            border: 1px solid #d3cdae;
+            font-size: 0.9em;
+            padding: 10px;
+            position: relative;
+            width: 300px;
+        }
+        p.help::before{
+            border-color: transparent #d3cdae transparent transparent;
+            border-style: solid;
+            border-width: 14px;
+            content: "";
+            left: -28px;
+            margin-top: -14px;
+            position: absolute;
+            top: 50%;
+
+        }
+        p.dica{
+            margin: auto;
+            text-align: center;
+            margin-top: 10px;
+        }
+        p.dica::before{
+            content: "\261E";
+            margin-right: 10px;
+        }
+        blockquote{
+            text-align: center;
+            color: darkblue;
+            font-style: italic;
+            margin-top: 30px;
+        }
+        blockquote::before, blockquote::after{
+            color: black;
+            font-size: 3em;
+        }
+        blockquote::before{
+            content: "\201C";
+        }
+        blockquote::after{
+            content: "\201D";
+        }
+        a.button{
+            background-color: #999999;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+            font-weight: bold;
+            padding: 0.5em 1em;
+            text-decoration: none;
+        }
+        a.primary-button{
+            background-color: #389739;
+        }
+        a.big-button{
+            font-size: 1.1em;
+        }
+        a.small-button{
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Um exemplo de pseudo elementos</h1>
+    </section>
+    <p class="help">
+        Preencha o campo com um e-mail válido, assim poderemos entrar em contato com você para informar o resultado do nosso concurso
+    </p>
+    <p class="dica">
+        Você sabia que...
+    </p>
+    <blockquote>
+        O problema de citações na Internet é que você não pode confirmar a sua veracidade.
+    </blockquote>
+    <a href="#" class="button primary-button big-button">Enviar mensagem</a>
+    <a href="#" class="button smal-button">Cancelar</a>
+</body>
+</html>
